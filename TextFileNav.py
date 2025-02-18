@@ -1,16 +1,13 @@
 def main():
-    # Prompt the user for a filename
     filename = input("Enter the filename: ")
 
     try:
-        # Read the file and store lines in a list
         with open(filename, "r") as file:
             lines = file.readlines()
     except FileNotFoundError:
         print("Error: File not found.")
         return
 
-    # Start navigation loop
     while True:
         print(f"\nThe file has {len(lines)} lines.")
         try:
@@ -25,6 +22,5 @@ def main():
         except ValueError:
             print("Please enter a valid number.")
 
-# Run the program
 if __name__ == "__main__":
     main()
